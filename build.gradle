@@ -18,6 +18,12 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	seleniumVersion = '3.141.59'
+	logbackVersion = '1.2.3'
+	webDriverManagerVersion = '3.3.0'
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -25,6 +31,14 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java',
+			version: seleniumVersion
+	implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: webDriverManagerVersion
+
+	implementation group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
