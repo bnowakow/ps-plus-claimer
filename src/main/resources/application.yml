@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+psn:
+  user:
+    name: CHANGE-ME
+    password: CHANGE-ME

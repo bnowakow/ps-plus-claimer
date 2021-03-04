@@ -23,7 +23,9 @@ public class PageObjectObject {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
 
+//        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver();
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 }
