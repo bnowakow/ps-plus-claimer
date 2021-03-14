@@ -3,5 +3,5 @@ server:
 
 psn:
   user:
-    name: CHANGE-ME
-    password: CHANGE-ME
+    # pdccws_p cookie value
+    token: CHANGE-ME

@@ -22,6 +22,7 @@ ext {
 	seleniumVersion = '3.141.59'
 	logbackVersion = '1.2.3'
 	webDriverManagerVersion = '3.3.0'
+    browsermobVersion = '2.1.5'
 }
 
 dependencies {
@@ -36,6 +37,9 @@ dependencies {
 	compile group: 'org.seleniumhq.selenium', name: 'selenium-java',
 			version: seleniumVersion
 	implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: webDriverManagerVersion
+
+	// https://webelement.click/en/http_header_selenium_webdriver_basic_authorization
+    implementation group: 'net.lightbody.bmp', name: 'browsermob-core', version: browsermobVersion
 
 	implementation group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
 

@@ -6,12 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.bnowakowski.playstation.ps_plus_claimer.page_object.page.LoginPage;
 
-@RestController
+//@RestController
 public class LoginObject extends PageObjectObject {
 
     protected LoginPage loginPage;
+
     @Value("${psn.user.name}")
     protected String userName;
+
     @Value("${psn.user.password}")
     protected String userPassword;
 
@@ -33,7 +35,7 @@ public class LoginObject extends PageObjectObject {
 //        loginPage.fillUsernameAndPasswordAndSubmit(userName, userPassword);
     }
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/login")
     public String login() {
 
         loginPage.fillUsernameAndPasswordAndSubmit(userName, userPassword);
